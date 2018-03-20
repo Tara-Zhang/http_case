@@ -1,5 +1,5 @@
 ENVIRONMENT_CONFIG={
-    'host':'https://dohko.m.hualala.com'
+    'host':'http://www.imooc.com'
 }
 
 EMAIL_CONFIG = {
