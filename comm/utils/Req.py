@@ -5,12 +5,9 @@ import requests
 class Req(object):
 
     def get_response(self, url, data, method,header=None):
-        if method == 'post':
-            res = requests.post(url,data)
-        elif method == 'get':
-            res = requests.get(url, data)
-        elif method == 'put':
-            res = requests.put(url,data)
+
+        res = requests.request(url,data)
+
         return res
 
 if __name__ == '__main__':
