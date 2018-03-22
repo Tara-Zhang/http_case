@@ -429,7 +429,7 @@ a.popup_link:hover {
 <col align='right' />
 </colgroup>
 <tr id='header_row'>
-    <td>Test Group/Test case</td>
+    <td>Test Group/Test http_case</td>
     <td>Count</td>
     <td>Pass</td>
     <td>Fail</td>
@@ -623,7 +623,7 @@ class HTMLTestRunner(Template_mixin):
 
 
     def run(self, test):
-        "Run the given test case or test suite."
+        "Run the given test http_case or test suite."
         result = _TestResult(self.verbosity)
         test(result)
         self.stopTime = datetime.datetime.now()
