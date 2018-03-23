@@ -16,7 +16,7 @@ class Test_demo(unittest.TestCase):
     def setUp(self):
         global step
         step+=1
-        file_name = '../data/test_shop.xlsx'
+        file_name = '../../data/test_shop.xlsx'
         index = 0
         self.getExcelCaseData.get_excel_data(file_name, index, step)
 
