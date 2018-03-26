@@ -16,7 +16,7 @@ class Test_demo(unittest.TestCase):
     def setUp(self):
         global step
         step+=1
-        file_name = '../../data/test_shop.xlsx'
+        file_name = '../data/test_shop.xlsx'
         index = 0
         self.getExcelCaseData.get_excel_data(file_name, index, step)
 
@@ -24,4 +24,7 @@ class Test_demo(unittest.TestCase):
         pass
 
     def test_one(self):
-        pass
+        exp_case_data, resp_case_data = self.getExcelCaseData.get_case_data()
+        self.assertIn(exp_case_data, resp_case_data, msg=None)
+
+

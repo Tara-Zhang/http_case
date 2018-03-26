@@ -25,10 +25,10 @@ class GetCaseData():
 
     def get_resp_data(self):
         req = Req()
-        resp = req.get_response(self.url, self.input, self.method)
+        resp = req.get_response(url = self.url, data=self.input, method=self.method)
         return resp
 
-    def get_case_data(self,file_name,index,row_index):
+    def get_case_data(self):
         exp_case_data=self.expect
         resp_case_data=self.get_resp_data()
         return exp_case_data,resp_case_data
@@ -36,8 +36,10 @@ class GetCaseData():
 
 
 if __name__ == '__main__':
-    get = GetCaseData()
+    req = GetCaseData()
     file_name='../../data/test_shop.xlsx'
     index=0
-    r =get.get_case_data(file_name,index,1)
+    row_index = 1
+    req.get_excel_data(file_name, index, row_index)
+    r=req.get_case_data()
     print(r)
